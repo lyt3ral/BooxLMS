@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 // import { writeFile, type WorkBook, utils } from "xlsx";
 import {
   // usePathname,
@@ -27,25 +27,19 @@ import {
   ChevronsLeft,
   ChevronsRight,
   // SlidersHorizontal,
-  Edit,
-  MoreVertical,
   Trash2,
-  View,
   // MoreHorizontal
 
   // Download,
 } from "lucide-react";
-import toast from "react-hot-toast";
 
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
   // DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
@@ -72,7 +66,6 @@ interface Props {
   pageCount?: number;
 }
 const BookTable = (props: Props) => {
-  const router = useRouter();
   // const pathname = usePathname();
 
   const [isPending, startTransition] = React.useTransition();
