@@ -50,8 +50,6 @@ export function UserAuthForm({
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const form = useForm<LoginInputs>();
-  const homeRoute = admin ? "/admin/dashboard" : "/";
-  const redirectRoute = useSearchParams().get("from") ?? homeRoute;
 
   const error = useSearchParams()?.get("error");
 
